@@ -14,7 +14,8 @@
 		}
 	},
 	"scripts": {
-		"install-packages": "yarn install --silent"
+		"install-packages": "yarn install --silent",
+		"start-server": "yarn workspace server start"
 	},
 	"dependencies": {
 		"yarn": "^1.22.10"
