@@ -3,18 +3,22 @@
 	"version": "0.1.0",
 	"license": "AGPL-3.0",
 	"author": "railek <jean@railek.com>",
+	"engines": {
+		"yarn": "1.22.5"
+	},
 	"scripts": {
 		"start": "CHOKIDAR_USEPOLLING=true nodemon server.js"
 	},
 	"dependencies": {
+		"bluebird": "^3.7.2",
 		"body-parser": "^1.19.0",
 		"compression": "^1.7.4",
+		"cookie-parser": "^1.4.5",
+		"cors": "^2.8.5",
 		"dotenv": "^10.0.0",
 		"express": "^4.17.1",
-		"express-rate-limit": "^5.2.6",
 		"helmet": "^4.6.0",
-		"morgan": "^1.10.0",
-		"pg": "^8.6.0"
+		"pg-promise": "^10.10.2"
 	},
 	"devDependencies": {
 		"eslint": "^7.23.0",

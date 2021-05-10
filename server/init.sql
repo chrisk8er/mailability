@@ -1,4 +1,5 @@
 CREATE TABLE templates (
-  ID SERIAL PRIMARY KEY,
-  title VARCHAR(255) NOT NULL
+  	template_id SERIAL PRIMARY KEY,
+  	title VARCHAR,
+	content VARCHAR
 );
