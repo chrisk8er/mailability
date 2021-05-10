@@ -15,6 +15,7 @@
 	},
 	"scripts": {
 		"install-packages": "yarn install --silent",
+		"kill-process": "pkill -f node",
 		"start-server": "yarn workspace server start"
 	},
 	"dependencies": {
