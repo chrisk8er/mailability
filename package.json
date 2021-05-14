@@ -16,7 +16,8 @@
 	"scripts": {
 		"install-packages": "yarn install --silent",
 		"kill-process": "pkill -f node",
-		"start-server": "yarn workspace server start"
+		"start-server": "yarn workspace server start",
+		"dev": "yarn workspace client dev"
 	},
 	"dependencies": {
 		"yarn": "^1.22.10"

@@ -7,18 +7,16 @@
 	"eslint.alwaysShowStatus": true,
 	"editor.formatOnSave": true,
 	"[javascript]": {
-		"editor.formatOnSave": false,
+		"editor.formatOnSave": false
 	},
 	"[javascriptreact]": {
-		"editor.formatOnSave": false,
+		"editor.formatOnSave": false
 	},
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": true
 	},
+	"javascript.suggestionActions.enabled": false,
 	"files.encoding": "utf8",
 	"files.autoSave": "onFocusChange",
-	"npm.exclude": [
-		"**/client",
-		"**/server"
-	]
+	"npm.exclude": ["**/client", "**/server"]
 }
