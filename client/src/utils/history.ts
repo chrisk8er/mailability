@@ -1,4 +1,5 @@
 import { createBrowserHistory } from 'history';
+import { ConfirmBeforeLeavePage } from '../utils/confirm-before-leave-page';
 
 export const history = createBrowserHistory({
 	getUserConfirmation(message, callback) {
@@ -9,21 +10,3 @@ export const history = createBrowserHistory({
 		}
 	},
 });
-
-type Callback = (ok: boolean) => void;
-
-class ConfirmBeforeLeavePage {
-	private static confirmHandler: null | ((cb: Callback) => void) = null;
-
-	static register = (handler: (cb: Callback) => void) => {
-		ConfirmBeforeLeavePage.confirmHandler = handler;
-	};
-
-	static unregister = () => {
-		ConfirmBeforeLeavePage.confirmHandler = null;
-	};
-
-	static confirmBeforeLeave = (message: string, callback: Callback) => {
-		if (ConfirmBeforeLeavePage.confirmHandler) ConfirmBeforeLeavePage.confirmHandler(callback);
-	};
-}

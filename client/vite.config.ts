@@ -15,5 +15,16 @@ export default defineConfig({
 	optimizeDeps: {
 		include: [],
 	},
+	css: {
+		modules: {
+			localsConvention: 'dashes',
+		},
+		preprocessorOptions: {
+			scss: {},
+			less: {
+				javascriptEnabled: true,
+			},
+		},
+	},
 	plugins: [reactRefresh()],
 });
