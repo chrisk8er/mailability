@@ -1,0 +1,30 @@
+{
+	"private": true,
+	"name": "mailability",
+	"author": "railek <jean@railek.com>",
+	"version": "0.1.0",
+	"license": "AGPL-3.0",
+	"workspaces": [
+		"server",
+		"client"
+	],
+	"husky": {
+		"hooks": {
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+		}
+	},
+	"scripts": {
+		"install-packages": "yarn install --silent",
+		"kill-process": "pkill -f node",
+		"server": "yarn workspace server start:dev",
+		"dev": "yarn workspace client dev"
+	},
+	"dependencies": {
+		"yarn": "^1.22.10"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^12.1.1",
+		"@commitlint/config-conventional": "^12.1.1",
+		"husky": "^6.0.0"
+	}
+}

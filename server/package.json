@@ -1,0 +1,36 @@
+{
+	"name": "server",
+	"version": "0.1.0",
+	"license": "AGPL-3.0",
+	"author": "railek <jean@railek.com>",
+	"engines": {
+		"yarn": "1.22.5"
+	},
+	"scripts": {
+		"start": "node server.js",
+		"start:dev": "nodemon server.js"
+	},
+	"dependencies": {
+		"bluebird": "^3.7.2",
+		"body-parser": "^1.19.0",
+		"compression": "^1.7.4",
+		"cookie-parser": "^1.4.5",
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"helmet": "^4.6.0",
+		"jimp": "^0.16.1",
+		"multer": "^1.4.2",
+		"pg-promise": "^10.10.2",
+		"uuid": "^8.3.2"
+	},
+	"devDependencies": {
+		"eslint": "^7.23.0",
+		"eslint-config-airbnb-base": "^14.2.1",
+		"eslint-config-prettier": "^8.1.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-prettier": "^3.3.1",
+		"nodemon": "^2.0.7",
+		"prettier": "^2.2.1"
+	}
+}
