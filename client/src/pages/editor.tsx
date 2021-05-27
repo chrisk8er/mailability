@@ -67,12 +67,25 @@ export default function Editor() {
 	);
 
 	const onExportHtml = (values: IEmailTemplate) => {
-		const html = mjml(transformToMjml(values.content), {
+		let html = mjml(transformToMjml(values.content), {
 			beautify: true,
 			validationLevel: 'soft',
 		}).html;
 
+		const clickTracking =
+			'<python>ct = click_tracking(distribution_list_id, data_json["data_index"], report_callback_type, report_callback_resource)</python>' +
+			'\n\n';
+		html = clickTracking + html;
+
 		copy(html);
+		message.success('Copied to pasteboard!');
+	};
+
+	const onExportImports = () => {
+		const imports =
+			'#!/opt/python2.7/bin/python\nfrom xml.sax.saxutils import escape\nfrom jupiterpy.click_tracking import click_tracking';
+
+		copy(imports);
 		message.success('Copied to pasteboard!');
 	};
 
@@ -114,8 +127,11 @@ export default function Editor() {
 							onBack={() => history.push('/')}
 							extra={[
 								<>
+									<Button onClick={() => onExportImports()}>
+										Export Imports
+									</Button>
 									<Button onClick={() => onExportHtml(values)}>
-										Export html
+										Export HTML
 									</Button>
 									<Button
 										loading={isSubmitting}
