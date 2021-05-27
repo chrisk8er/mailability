@@ -27,7 +27,6 @@ export default function Editor() {
 
 	useEffect(() => {
 		if (id) {
-			console.log(id);
 			dispatch(template.actions.fetchById(+id));
 		} else {
 			dispatch(template.actions.fetchDefaultTemplate(undefined));
