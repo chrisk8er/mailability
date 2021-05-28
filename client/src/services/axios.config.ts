@@ -1,7 +1,9 @@
 import axios, { AxiosRequestConfig } from 'axios';
+const url = import.meta.env.VITE_URL;
+const isProduction = import.meta.env.NODE_ENV === 'production';
 
 export const axiosInstance = axios.create({
-	baseURL: 'http://localhost:3000',
+	baseURL: isProduction ? `http://${url}` : 'http://localhost:3000',
 });
 
 export const request = {
