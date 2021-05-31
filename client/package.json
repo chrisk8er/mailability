@@ -6,7 +6,8 @@
 	"author": "railek <jean@railek.com>",
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build"
+		"build": "vite build",
+		"serve": "vite preview"
 	},
 	"devDependencies": {
 		"@types/node": "^14.14.22",
