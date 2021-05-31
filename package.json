@@ -2,7 +2,7 @@
 	"private": true,
 	"name": "mailability",
 	"author": "railek <jean@railek.com>",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"license": "AGPL-3.0",
 	"workspaces": [
 		"server",
@@ -17,7 +17,9 @@
 		"install-packages": "yarn install --silent",
 		"kill-process": "pkill -f node",
 		"server": "yarn workspace server start:dev",
-		"dev": "yarn workspace client dev"
+		"dev": "yarn workspace client dev",
+		"build": "yarn workspace client build",
+		"serve": "yarn workspace client serve"
 	},
 	"dependencies": {
 		"yarn": "^1.22.10"

@@ -3,7 +3,7 @@ const url = import.meta.env.VITE_URL;
 const isProduction = import.meta.env.NODE_ENV === 'production';
 
 export const axiosInstance = axios.create({
-	baseURL: isProduction ? `http://${url}` : 'http://localhost:3000',
+	baseURL: 'https://mailability.herokuapp.com',
 });
 
 export const request = {
